@@ -1,24 +1,24 @@
 <template>
     <div id="content">
-        <b-navbar toggleable="lg" type="dark" variant="primary" class="fixed-top">
-            <b-navbar-brand href="#">
-                AquaTrack
-            </b-navbar-brand>
-
-            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-            <b-collapse id="nav-collapse" is-nav>
-                <b-navbar-nav>
-                    <b-nav-item href="#">Link</b-nav-item>
-                    <b-nav-item href="#">Link2</b-nav-item>
-                </b-navbar-nav>
-            </b-collapse>
-        </b-navbar>
-
-
+        <template>
+            <b-navbar toggleable type="dark">
+                <b-navbar-brand href="#">
+                    <h2>
+                        <b-icon icon="droplet-half" aria-hidden="true"></b-icon> AquaTrack
+                    </h2>
+                </b-navbar-brand>
+                <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+                <b-collapse id="nav-collapse" is-nav>
+                    <b-navbar-nav class="ml-auto">
+                        <b-nav-item href="#">Link</b-nav-item>
+                        <b-nav-item href="#">Link2</b-nav-item>
+                    </b-navbar-nav>
+                </b-collapse>
+            </b-navbar>
+        </template>
         <Content />
-        <footer class="text-center bg-primary">
-            <p> AquaTrack Made With Love</p>
+        <footer class="text-center fixed-bottom">
+            <h5> <b-icon icon="droplet-half" aria-hidden="true"></b-icon> AquaTrack Made With Love</h5>
         </footer>
     </div>
 </template>
@@ -42,12 +42,9 @@ footer {
     color: white;
 }
 
-#content {
-    background-color: rgb(157, 216, 255);
-}
-
 nav {
     padding: 10px;
+
 }
 </style>
   
