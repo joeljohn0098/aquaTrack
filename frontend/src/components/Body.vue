@@ -1,13 +1,14 @@
 <template>
     <div>
-        <b-card>
+        <b-card id="hydration-level">
             <!-- <div class="aqua-translate">
                                 <div class="aqua-flow"></div>
                             </div> -->
-            <div class="aqua-solid">H2O</div>
-            <div class="text-center human-img">
-                <img alt="maleImg" src="../assets/The_maleFinal.png" width="40%" height="35%">
+            <div class="text-center">
+                <div class="aqua-solid">H2O</div>
+                <img alt="maleImg" src="../assets/The_maleFinal.png" width="40%" height="35%" class="human-img">
             </div>
+
             <div class="text-center">Body Vitals</div>
         </b-card>
         <br>
@@ -22,6 +23,10 @@ export default {
 </script>
 
 <style scoped>
+#hydration-level {
+    overflow: hidden;
+}
+
 .human-img {
     position: relative;
 }
@@ -32,10 +37,18 @@ export default {
     width: 34%;
     background-color: rgb(19, 227, 255);
     text-align: center;
-    bottom: 92px;
+    bottom: 10%;
     left: 33%;
     color: white;
+    overflow-y: inherit;
     animation: aquaAnim 4s ease-out infinite;
+}
+
+@media only screen and (max-width: 500px) {
+    .aqua-solid {
+        max-width: auto;
+
+    }
 }
 
 @keyframes aquaAnim {

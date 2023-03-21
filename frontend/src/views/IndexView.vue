@@ -20,18 +20,32 @@
         <footer class="text-center fixed-bottom">
             <h5> <b-icon icon="droplet-half" aria-hidden="true"></b-icon> AquaTrack Made With Love</h5>
         </footer>
+        <div class="d-none d-lg-none d-xl-block">
+            <Lottie class="bgm-wave" :options="defaultOptions" :height="1040" v-on:animCreated="handleAnimation" />
+        </div>
     </div>
 </template>
   
 <script>
 // @ is an alias to /src
 import Content from '@/components/Content.vue'
-
+import * as animationData from '@/assets/animations/water-waves.json';
 
 export default {
     name: 'IndexView',
     components: {
         Content
+    },
+    data() {
+        return {
+            defaultOptions: { animationData },
+
+        }
+    },
+    methods: {
+        handleAnimation: function (anim) {
+            anim.setSpeed(0.2);
+        },
     }
 }
 </script>
@@ -45,6 +59,12 @@ footer {
 nav {
     padding: 10px;
 
+}
+
+.bgm-wave {
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
 }
 </style>
   

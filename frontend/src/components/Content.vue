@@ -10,6 +10,14 @@
                     </b-col>
                     <b-col sm="7">
                         <b-card>
+                            <h3 class="text-center">Current Weather</h3>
+                            <div class="text-center">
+                                <img src="https://t4.ftcdn.net/jpg/03/85/33/67/360_F_385336747_lCcNeRpqrhmwr3TiToK4DokmwljzEY1q.jpg"
+                                    width="200px" height="100" />
+                            </div>
+                        </b-card>
+                        <br>
+                        <b-card>
                             <h3 class="text-center">Drink 4 glass of water to stay hydrated</h3>
                         </b-card>
                     </b-col>
