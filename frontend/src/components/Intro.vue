@@ -1,30 +1,28 @@
 <template>
-    <div>
-        <div id="slider">
-            <b-container>
-                <span class="closebtn" @click="closeSlider">&times;</span>
-                <h1 class="big-text text-center">I AM</h1>
-                <b-row>
-                    <b-col sm="6">
-                        <div class="maleCard">
-                            <b-card border-variant="primary" header-bg-variant="primary" text-variant="white" header="Male"
-                                class="text-center" style="cursor:pointer" @click="closeSlider">
-                                <img src="../assets/male-avt.gif" height="100%" width="100%" />
-                            </b-card>
-                        </div>
-                    </b-col>
-                    <b-col sm="6">
-                        <div class="femaleCard">
-                            <b-card border-variant="danger" header-bg-variant="danger" text-variant="white" header="Female"
-                                class="text-center" style="cursor:pointer" @click="closeSlider">
-                                <img src="../assets/female-avt.gif" height="100%" width="100%" />
-                            </b-card>
-                        </div>
+    <div id="slider">
+        <b-container>
+            <span class="closebtn" @click="closeSlider">&times;</span>
+            <h1 class="big-text text-center">I AM</h1>
+            <b-row>
+                <b-col sm="6">
+                    <div class="maleCard" @mouseenter="toogleMaleBg()" @mouseleave="toggleBg()">
+                        <b-card border-variant="primary" header-bg-variant="primary" text-variant="white" header="Male"
+                            class="text-center" style="cursor:pointer" @click="closeSlider">
+                            <img src="../assets/male-avt.gif" height="100%" width="100%" />
+                        </b-card>
+                    </div>
+                </b-col>
+                <b-col sm="6">
+                    <div class="femaleCard" @mouseenter="toogleFemaleBg()" @mouseleave="toggleBg()">
+                        <b-card border-variant="danger" header-bg-variant="danger" text-variant="white" header="Female"
+                            class="text-center" style="cursor:pointer" @click="closeSlider">
+                            <img src="../assets/female-avt.gif" height="100%" width="100%" />
+                        </b-card>
+                    </div>
 
-                    </b-col>
-                </b-row>
-            </b-container>
-        </div>
+                </b-col>
+            </b-row>
+        </b-container>
     </div>
 </template>
 
@@ -39,10 +37,21 @@ export default {
     methods: {
         closeSlider: function () {
             document.getElementById("slider").style.width = "0";
+            this.$emit('load-content');
         },
         toogleFemaleBg: function () {
-            $('#slider').css({ background: "red" });
+            $('#slider').css("background", "radial-gradient(circle, rgb(245, 76, 169) 0%, rgba(140, 175, 217, 1) 100%)");
+            console.log('test');
+        },
+        toogleMaleBg: function () {
+            $('#slider').css("background", "radial-gradient(circle, rgb(28, 223, 223) 0%, rgba(140, 175, 217, 1) 100%)");
+            console.log('test');
+        },
+        toggleBg: function () {
+            $('#slider').css("background", "radial-gradient(circle, rgb(156, 201, 201) 0%, rgba(140, 175, 217, 1) 100%)");
         }
+    },
+    mounted() {
     }
 };
 </script>
@@ -59,7 +68,7 @@ export default {
     z-index: 1;
     top: 0;
     right: 0;
-    background: radial-gradient(circle, rgba(97, 195, 195, 1) 0%, rgba(140, 175, 217, 1) 100%);
+    background: radial-gradient(circle, rgb(156, 201, 201) 0%, rgba(140, 175, 217, 1) 100%);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
