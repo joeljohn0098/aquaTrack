@@ -1,5 +1,6 @@
 <template>
-    <div id="content">
+    <div id="IndexView">
+        <Intro />
         <template>
             <b-navbar toggleable type="dark">
                 <b-navbar-brand href="#">
@@ -29,12 +30,13 @@
 <script>
 // @ is an alias to /src
 import Content from '@/components/Content.vue'
+import Intro from '@/components/Intro.vue'
 import * as animationData from '@/assets/animations/water-waves.json';
 
 export default {
     name: 'IndexView',
     components: {
-        Content
+        Content, Intro
     },
     data() {
         return {

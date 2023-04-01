@@ -12,8 +12,10 @@
                         <b-card>
                             <h3 class="text-center">Current Weather</h3>
                             <div class="text-center">
-                                <img src="https://t4.ftcdn.net/jpg/03/85/33/67/360_F_385336747_lCcNeRpqrhmwr3TiToK4DokmwljzEY1q.jpg"
-                                    width="200px" height="100" />
+                                <!-- weather widget start --><a target="_blank"
+                                    href="https://www.booked.net/weather/kerala-32462"><img
+                                        src="https://w.bookcdn.com/weather/picture/1_32462_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=40569&domid=w209&anc_id=54881"
+                                        alt="booked.net" /></a><!-- weather widget end -->
                             </div>
                         </b-card>
                         <br>
@@ -42,15 +44,6 @@ export default {
 </script>
 
 <style>
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 132, 255, 0.2);
-    padding: 20px;
-}
-
-.card:hover {
-    box-shadow: 0 18px 16px 0 rgba(0, 153, 255, 0.2);
-}
-
 .aqua-flow {
     position: absolute;
     height: 200px;

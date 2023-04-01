@@ -34,11 +34,11 @@ export default {
 .aqua-solid {
     position: absolute;
     height: 100%;
-    width: 34%;
+    width: 36%;
     background-color: rgb(19, 227, 255);
     text-align: center;
     bottom: 10%;
-    left: 33%;
+    left: 32%;
     color: white;
     overflow-y: inherit;
     animation: aquaAnim 4s ease-out infinite;
