@@ -36,7 +36,8 @@ export default {
     },
     methods: {
         closeSlider: function () {
-            document.getElementById("slider").style.width = "0";
+            //document.getElementById("slider").style.width = "0";
+            $('#slider').fadeOut();
             this.$emit('load-content');
         },
         toogleFemaleBg: function () {

@@ -2,29 +2,20 @@
     <div>
         <b-container>
             <b-card>
-                <h2 class="text-center">Water & Hydration</h2>
+                <h2 class="text-center">Weather & Hydration</h2>
                 <b-row>
                     <b-col sm="5">
 
                         <Body />
                     </b-col>
                     <b-col sm="7">
-                        <b-card>
-                            <h3 class="text-center">Current Weather</h3>
-                            <div class="text-center">
-                                <!-- weather widget start --><a target="_blank"
-                                    href="https://www.booked.net/weather/kerala-32462"><img
-                                        src="https://w.bookcdn.com/weather/picture/1_32462_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=40569&domid=w209&anc_id=54881"
-                                        alt="booked.net" /></a><!-- weather widget end -->
-                            </div>
-                        </b-card>
+                        <Weather />
                         <br>
                         <b-card>
-                            <h3 class="text-center">Drink 4 glass of water to stay hydrated</h3>
+                            <h3 class="text-center">Drink 6-8 glasses of water to stay hydrated</h3>
                         </b-card>
                     </b-col>
                 </b-row>
-
             </b-card>
         </b-container>
         <br>
@@ -33,12 +24,14 @@
 
 <script>
 import Body from '@/components/Body.vue'
+import Weather from '@/components/Weather.vue'
 
 export default {
     name: 'Content',
     props: {},
     components: {
-        Body
+        Body,
+        Weather
     }
 }
 </script>
