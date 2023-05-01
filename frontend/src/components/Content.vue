@@ -9,10 +9,24 @@
                         <Body />
                     </b-col>
                     <b-col sm="7">
-                        <Weather />
+                        <Weather :selectedGender="selectedGender" />
                         <br>
                         <b-card>
-                            <h3 class="text-center">Drink 6-8 glasses of water to stay hydrated</h3>
+                            <h3 class="text-center">Note</h3>
+                            <ul>
+                                <li>
+                                    When working in the heat, drink 1 cup
+                                    (8 ounces) of water every 15–20 minutes.
+                                </li>
+                                <li>
+                                    This translates to ¾–1 quart (24–32 ounces)
+                                    per hour.
+                                </li>
+                                <li>
+                                    Drinking at shorter intervals is more effective
+                                    than drinking large amounts infrequently.
+                                </li>
+                            </ul>
                         </b-card>
                     </b-col>
                 </b-row>
@@ -28,7 +42,7 @@ import Weather from '@/components/Weather.vue'
 
 export default {
     name: 'Content',
-    props: {},
+    props: { selectedGender: String },
     components: {
         Body,
         Weather
@@ -37,7 +51,7 @@ export default {
 </script>
 
 <style>
-.aqua-flow {
+/* .aqua-flow {
     position: absolute;
     height: 200px;
     width: 132px;
@@ -58,6 +72,6 @@ export default {
         clip-path: polygon(0 83%, 10% 88%, 23% 92%, 34% 95%, 44% 89%, 53% 79%, 63% 69%, 75% 65%, 84% 66%, 94% 68%, 100% 73%, 100% 100%, 0 100%);
     }
 
-}
+} */
 </style>
 

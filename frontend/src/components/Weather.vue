@@ -6,7 +6,16 @@
                     Fetching weather details...
                     <b-skeleton width="85%"></b-skeleton>
                     <b-skeleton width="55%"></b-skeleton>
-                    <b-skeleton width="70%"></b-skeleton>
+                    <b-skeleton height="70%"></b-skeleton>
+                    <b-skeleton width="85%"></b-skeleton>
+                    <b-skeleton height="55%"></b-skeleton>
+                    <b-skeleton height="70%"></b-skeleton>
+                    <b-skeleton width="85%"></b-skeleton>
+                    <b-skeleton width="55%"></b-skeleton>
+                    <b-skeleton height="70%"></b-skeleton>
+                    <b-skeleton width="85%"></b-skeleton>
+                    <b-skeleton height="55%"></b-skeleton>
+                    <b-skeleton height="70%"></b-skeleton>
                 </b-card>
             </template>
             <b-card id="weather-card">
@@ -68,7 +77,7 @@
 <script>
 export default {
     name: 'Weather',
-    props: {},
+    props: { selectedGender: String },
     data() {
         return {
             api_key: "a1f36eee2f5b7bee1e2932180facf9ad",
@@ -106,7 +115,7 @@ export default {
                     this.humidity = this.response.main.humidity;
                     this.sky = this.response.weather[0].main;
                     this.sky_icon = this.renderSky(this.sky);
-                    //this.changeBg();
+                    this.changeBg();
                 }
             } catch (e) {
                 alert(`${this.response.message}, try other city`);
@@ -130,15 +139,14 @@ export default {
                     return "cloud-sun";
             }
         },
-        // changeBg() {
-        //     if (this.temperature < 20) {
-        //         alert(this.temperature);
-        //         $('#weather-card').css("background", "linear-gradient(139deg, rgba(2,85,230,1) 0%, rgba(0,191,255,1) 67%)");
-        //     }
-        //     else if (this.temperature > 25) {
-        //         $('#weather-card').css("background", "linear-gradient(139deg, rgba(255,100,0,1) 19%, rgba(0,255,233,1) 67%)");
-        //     }
-        // }
+        changeBg() {
+            if (this.temperature < 20) {
+                $('#weather-card').css("background", "blue");
+            }
+            else if (this.temperature > 25) {
+                $('#weather-card').css("background", "red");
+            }
+        }
     },
     async mounted() {
         await this.fetchWeather();

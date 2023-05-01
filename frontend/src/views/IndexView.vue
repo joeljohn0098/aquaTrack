@@ -1,6 +1,6 @@
 <template>
     <div id="IndexView">
-        <Intro @load-content="loadContent()" />
+        <Intro @load-content="loadContent" />
         <div id="content">
             <template>
                 <b-navbar toggleable type="dark">
@@ -17,7 +17,7 @@
                     </b-collapse>
                 </b-navbar>
             </template>
-            <Content />
+            <Content v-if="gender" :selectedGender="gender" />
             <footer class="text-center fixed-bottom">
                 <h5> <b-icon icon="droplet-half" aria-hidden="true"></b-icon> AquaTrack Made With Love</h5>
             </footer>
@@ -42,6 +42,7 @@ export default {
     data() {
         return {
             defaultOptions: { animationData },
+            gender: '',
 
         }
     },
@@ -49,7 +50,8 @@ export default {
         handleAnimation: function (anim) {
             anim.setSpeed(0.2);
         },
-        loadContent: function () {
+        loadContent: function (gender) {
+            this.gender = gender;
             $('#content').fadeIn(2000);
 
         }

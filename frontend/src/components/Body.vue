@@ -9,7 +9,7 @@
                 <img alt="maleImg" src="../assets/The_maleFinal.png" width="40%" height="35%" class="human-img">
             </div>
 
-            <div class="text-center">Body Vitals</div>
+            <div class="text-center">Hydration level</div>
         </b-card>
         <br>
     </div>
@@ -33,7 +33,7 @@ export default {
 
 .aqua-solid {
     position: absolute;
-    height: 100%;
+    height: 400px;
     width: 36%;
     background-color: rgb(19, 227, 255);
     text-align: center;
@@ -41,7 +41,7 @@ export default {
     left: 32%;
     color: white;
     overflow-y: inherit;
-    animation: aquaAnim 4s ease-out infinite;
+    animation: aquaAnim 4s;
 }
 
 @media only screen and (max-width: 500px) {
@@ -70,7 +70,7 @@ export default {
     }
 
     100% {
-        height: 11px;
+        height: 400px;
     }
 }
 </style>
